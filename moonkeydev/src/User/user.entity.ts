@@ -1,9 +1,9 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 
-@Entity()
-export class  Client {
-    @PrimaryGeneratedColumn()
-    id: number
+@Entity({name: 'User'})
+export class  User {
+    @PrimaryGeneratedColumn('uuid')
+    id: string
 
     @Column()
     nome: string
