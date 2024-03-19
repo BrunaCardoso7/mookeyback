@@ -5,6 +5,9 @@ import { ClientTable1710717866220 } from "./migrations/1710717866220-ClientTable
 import { VendasTables1710722768646 } from "./migrations/1710722768646-VendasTables"
 import { VendasProdutosTable1710749006215 } from "./migrations/1710749006215-Vendas_ProdutosTable"
 import { ProdutosTable1710749699804 } from "./migrations/1710749699804-ProdutosTable"
+import { Produto } from "./Produto/produto.entity"
+import { VendaProduto } from "./Venda_Produto/venda_produto.entity"
+import { Venda } from "./Vendas/venda.entity"
 
 export const AppDataSource = new DataSource({
     type: "postgres",
@@ -15,7 +18,7 @@ export const AppDataSource = new DataSource({
     database: "moonkey",
     synchronize: true,
     logging: false,
-    entities: [User],
+    entities: [User, Produto, VendaProduto, Venda],
     migrations: [ClientTable1710717866220, VendasTables1710722768646, ProdutosTable1710749699804, VendasProdutosTable1710749006215],
     subscribers: [],
 })

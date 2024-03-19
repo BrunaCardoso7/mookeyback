@@ -1,8 +1,6 @@
 import { UserController } from './user.controller';
 import express,  { Router } from 'express';
 
-const router = express.Router()
-
 export class UserRouter {
     private router: Router
     private userController: UserController
