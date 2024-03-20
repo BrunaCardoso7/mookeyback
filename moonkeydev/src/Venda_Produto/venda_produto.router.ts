@@ -7,7 +7,7 @@ export class VendaProdutoRouter {
     constructor(vendaProdutoController: VendaProdutoController){
         this.router = Router()
         this.vendaProdutoController = vendaProdutoController
-        this.getRouter()
+        this.initializeRouter()
     }
 
     async initializeRouter () {

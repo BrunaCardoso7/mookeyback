@@ -9,13 +9,11 @@ export class VendaProdutoController {
     }
     async createVendaProduto (req: Request, res: Response) {
         try {
-            const vendaprodData = req.params
-
-            const {prod_id, vend_id} = vendaprodData
+            const {produto_id, vendas_id} = req.body
 
             const vendaProduto = new VendaProduto()
-            vendaProduto.produto_id = prod_id
-            vendaProduto.vendas_id = vend_id
+            vendaProduto.produto_id = produto_id
+            vendaProduto.vendas_id = vendas_id
 
             const newProdutoVenda = await this.vendaProdutoService.createVendaProduto(vendaProduto)
             return res.status(200).json({message: 'venda realizada com sucesso', newProdutoVenda})

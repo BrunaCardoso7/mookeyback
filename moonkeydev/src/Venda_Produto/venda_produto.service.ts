@@ -15,10 +15,12 @@ export class VendaProdutoService {
     }
     async createVendaProduto (vendaProduto: VendaProduto) {
         try {
+            console.log(vendaProduto)
             const newProdutoVenda =  this.vendaProdutoRepository.create(vendaProduto)
             await this.vendaProdutoRepository.save(newProdutoVenda)
             return newProdutoVenda
         } catch (error) {
+            console.log(vendaProduto)
             console.error("error na camada de serviço: ", error)
         }
     }
