@@ -9,7 +9,7 @@ export class ProdutoController {
     }
     async createProduto (req: Request, res: Response) { 
         try {
-            const produtodata: ProdutoProps =req.body
+            const produtodata: ProdutoProps = req.body
             const {nome, quantidade, preco} = produtodata
 
             if(!nome || !quantidade || !preco) {
