@@ -6,7 +6,7 @@ export class AddQuantityCollumnVendaProduto1711240751432 implements MigrationInt
         await queryRunner.addColumn('vendas_produto', new TableColumn ({
             name: 'quantidade',
             type: 'int',
-            isNullable: false,
+            isNullable: true,
             default: 1,
         }))
     }
