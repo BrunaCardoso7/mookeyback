@@ -8,6 +8,9 @@ export class VendaProduto {
     @Column({type: 'uuid', nullable: false})
     produto_id: string
 
+    @Column({type: 'int', nullable: false})
+    quantidade: number
+
     @Column({type: 'uuid', nullable: false})
     vendas_id: string
 }
